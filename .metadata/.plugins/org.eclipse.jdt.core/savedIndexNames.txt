@@ -1,7 +1,6 @@
 INDEX VERSION 1.131+C:\Users\ø¿√¢±‚\programing\TestExam\.metadata\.plugins\org.eclipse.jdt.core
-2777651078.index
-3351430973.index
-1007508806.index
-345506749.index
 1865797976.index
-202781466.index
+2777651078.index
+1015465532.index
+345506749.index
+3602885956.index

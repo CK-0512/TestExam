@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	body, ul, li {list-style: none; margin: 0; padding : 0;}
+	a {text-decoration: none;}
+	header {text-align: center; padding: 3px; background-color: blue}
+	header > h1 {color: white;}
+	nav > ul {display: flex; background-color: purple;}
+	nav > ul > li > a {color: white; display: block; padding: 10px; margin-left: 20px;}
+	section {padding : 20px;}
+	section > h2 {text-align: center; margin-bottom: 40px;}
+	table {position: relative; left: 30%; width: 40%;}
+	th, td {border: 1px solid black;}
+	#btn-box > td {text-align: center;}
+	footer {background-color: blue; text-align: center; padding : 10px;}
+	footer > span {color : white; font-size : 1.25rem;}
+</style>
+<script>
+	function send() {
+		if (!join.name.value) {
+			alert("회원성명을 입력하세요");
+			join.name.focus();
+			return;
+		}
+		if (!join.addr.value) {
+			alert("주소를 입력하세요");
+			join.addr.focus();
+			return;
+		}
+		if (!join.regDate.value) {
+			alert("가입일자를 입력하세요");
+			join.regDate.focus();
+			return;
+		}
+		if (!join.grade.value) {
+			alert("고객등급을 입력하세요");
+			join.grade.focus();
+			return;
+		}
+		if (!join.city.value) {
+			alert("도시코드를 입력하세요");
+			join.city.focus();
+			return;
+		}
+		alert("회원등록이 정상적으로 등록되었습니다.");
+	}
+	
+	function re() {
+		alert("모든 정보를 지우고 다시 시작합니다.");
+		join.reset();
+		join.name.focus();
+	}
+</script>
+</head>
+<body>
+	<header>
+		<h1>쇼핑몰 회원관리 VER 1.0</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="join.html">회원등록</a></li>
+			<li><a>회원목록조회/수정</a></li>
+			<li><a>회원별매출조회</a></li>
+			<li><a href="index.html">홈으로</a></li>
+		</ul>
+	</nav>
+	<section>
+		<h2>쇼핑몰 회원 등록</h2>
+		<form method="post" name="join">
+			<table>
+				<tr>
+					<th>회원번호(자동발생)</th>
+					<td><input name="id"/></td>
+				</tr>
+				<tr>
+					<th>회원성명</th>
+					<td><input name="name"/></td>
+				</tr>
+				<tr>
+					<th>회원주소</th>
+					<td><input name="addr"/></td>
+				</tr>
+				<tr>
+					<th>가입일자</th>
+					<td><input name="regDate"/></td>
+				</tr>
+				<tr>
+					<th>고객등급[A:VIP, B:일반, C:직원]</th>
+					<td><input name="grade"/></td>
+				</tr>
+				<tr>
+					<th>도시코드</th>
+					<td><input name="city"/></td>
+				</tr>
+				<tr id="btn-box">
+					<td colspan="2">
+						<input type="button" onClick="send()" value="등록"/>
+						<input type="button" onClick="re()" value="취소"/>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</section>
+	<footer>
+		<span>HRDKOREA Copyright@2016 All rights reserve. Human Resources Development Service of Korea</span>
+	</footer>
+</body>
+</html>
